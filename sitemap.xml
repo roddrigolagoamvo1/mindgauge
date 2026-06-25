@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: adicione uma <url> nova aqui pra cada página nova que você publicar.
+     NÃO inclua _template.html. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://mindgauge.fyi/</loc><priority>1.0</priority></url>
+
+  <url><loc>https://mindgauge.fyi/tests/reaction-time-test.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mindgauge.fyi/tests/typing-speed-test.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mindgauge.fyi/tests/internet-speed-test.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mindgauge.fyi/tests/personality-type-quiz.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mindgauge.fyi/tests/love-language-quiz.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mindgauge.fyi/tests/political-compass-test.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mindgauge.fyi/tests/career-aptitude-quiz.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mindgauge.fyi/tests/emotional-intelligence-test.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mindgauge.fyi/tests/brain-dominance-test.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mindgauge.fyi/tests/stress-level-test.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mindgauge.fyi/tests/color-blindness-test.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mindgauge.fyi/tests/hearing-frequency-test.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mindgauge.fyi/tests/eye-dominance-test.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mindgauge.fyi/tests/memory-test.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mindgauge.fyi/tests/general-knowledge-quiz.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mindgauge.fyi/tests/english-dialect-quiz.html</loc><priority>0.9</priority></url>
+
+  <url><loc>https://mindgauge.fyi/about.html</loc><priority>0.5</priority></url>
+  <url><loc>https://mindgauge.fyi/contact.html</loc><priority>0.3</priority></url>
+  <url><loc>https://mindgauge.fyi/privacy-policy.html</loc><priority>0.2</priority></url>
+  <url><loc>https://mindgauge.fyi/terms-of-service.html</loc><priority>0.2</priority></url>
+  <url><loc>https://mindgauge.fyi/disclaimer.html</loc><priority>0.2</priority></url>
+</urlset>

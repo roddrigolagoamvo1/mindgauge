@@ -1,0 +1,4 @@
+# TODO: depois de criar sua conta no Google AdSense, troque pub-0000000000000000
+# pelo seu Publisher ID real (aparece no painel do AdSense, formato pub-XXXXXXXXXXXXXXXX).
+# Este arquivo PRECISA estar em https://seudominio.com/ads.txt (raiz do domínio).
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

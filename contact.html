@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact MindGauge</title>
+<meta name="description" content="Get in touch with the MindGauge team — report a bug, suggest a test, or ask a question.">
+<link rel="canonical" href="https://mindgauge.fyi/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="/" class="logo">
+      <svg class="dial" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="9" stroke="#FF5A36" stroke-width="2"/>
+        <line x1="12" y1="12" x2="16" y2="8" stroke="#1F2D50" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      MindGauge
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="nav-links">
+      <a href="/#speed">Speed &amp; Reflex</a>
+      <a href="/#mind">Personality</a>
+      <a href="/#senses">Senses</a>
+      <a href="/#knowledge">Knowledge</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding:36px 0 60px;">
+  <article class="legal">
+    <p class="eyebrow">Contact</p>
+    <h1>Get in touch</h1>
+    <p>The fastest way to reach us is email. We read everything, even if a reply takes a few days.</p>
+
+    <p style="font-family:var(--font-mono); font-size:1.1rem;">
+      <!-- TODO: troque pelo seu e-mail real -->
+      📧 <a href="mailto:hello@mindgauge.fyi">hello@mindgauge.fyi</a>
+    </p>
+
+    <h2>What to write in</h2>
+    <p>Bug reports (please mention the test name and your browser), test ideas, accuracy concerns, advertising or partnership questions, or anything else.</p>
+
+    <!--
+      TODO (opcional): se quiser um formulário funcional sem precisar de
+      servidor próprio, troque o e-mail acima por um formulário usando um
+      serviço gratuito de form-backend para sites estáticos, como Formspree
+      (formspree.io) ou Web3Forms — eles te dão uma action="" pra colar
+      direto neste <form>. Exemplo de estrutura, depois de criar sua conta:
+
+      <form action="https://formspree.io/f/SEU_ID_AQUI" method="POST">
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    -->
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="logo" style="margin-bottom:8px;">MindGauge</div>
+      <p>Free instant mind &amp; reflex tests. For entertainment and informational purposes only — see our <a href="/disclaimer.html">disclaimer</a>.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms-of-service.html">Terms of Service</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:18px;">
+    <small style="font-family:var(--font-mono);">© <span id="year"></span> MindGauge.</small>
+  </div>
+</footer>
+
+<div class="cookie-banner">
+  <div class="wrap">
+    <p>We use cookies to run this site and, once you consent, to personalize ads. See our <a href="/privacy-policy.html" style="color:#fff;text-decoration:underline;">Privacy Policy</a>.</p>
+    <div class="actions">
+      <button class="btn ghost" data-reject>Reject</button>
+      <button class="btn" data-accept>Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

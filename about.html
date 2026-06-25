@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About MindGauge</title>
+<meta name="description" content="Who builds MindGauge's tests, why the site exists, and how each test is designed and checked.">
+<link rel="canonical" href="https://mindgauge.fyi/about.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="/" class="logo">
+      <svg class="dial" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="9" stroke="#FF5A36" stroke-width="2"/>
+        <line x1="12" y1="12" x2="16" y2="8" stroke="#1F2D50" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      MindGauge
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="nav-links">
+      <a href="/#speed">Speed &amp; Reflex</a>
+      <a href="/#mind">Personality</a>
+      <a href="/#senses">Senses</a>
+      <a href="/#knowledge">Knowledge</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding:36px 0 60px;">
+  <article class="legal">
+    <p class="eyebrow">About</p>
+    <h1>Built to give you a real number, not a feed of ads.</h1>
+
+    <p><!-- TODO: troque pelo seu nome/identidade real --> MindGauge is an independent site built and maintained by <strong>[Your Name]</strong>. I got tired of "free test" sites that bury a thirty-second quiz under five pages of slideshow ads, a forced sign-up, and a result that turns out to be a sales pitch for something else. MindGauge is the opposite of that: every test runs entirely in your browser, gives you a real number, and tells you in plain language how that number was calculated.</p>
+
+    <h2>What this site is</h2>
+    <p>MindGauge is a collection of short, free, self-administered tests covering reaction speed, typing, basic personality self-assessment, sensory perception, and general knowledge. Each test takes one to three minutes and requires no account, no email address, and no app download.</p>
+
+    <h2>What this site is not</h2>
+    <p>None of these tests are clinical, diagnostic, or psychological instruments. They are simplified, browser-based self-assessments meant for curiosity and entertainment. If you have genuine concerns about your vision, hearing, attention, memory, or mental health, please talk to a qualified professional — see our <a href="/disclaimer.html">disclaimer</a> for more detail.</p>
+
+    <h2>How each test is built</h2>
+    <p>Every test on MindGauge is designed around a single, clearly described method — for example, the Reaction Time Test measures the delay between a color change and your click, averaged across five rounds. <!-- TODO: ajuste/expanda conforme seu processo real --> Before publishing, each test is run by hand multiple times to check that the scoring logic behaves as described and that the result shown matches the methodology explained on that test's page.</p>
+
+    <h2>How this site is funded</h2>
+    <p>MindGauge is supported by advertising. Ads are served by Google AdSense and similar networks, which may use cookies to show relevant ads — details are in our <a href="/privacy-policy.html">Privacy Policy</a>. Advertising never influences a test's scoring or results.</p>
+
+    <h2>Get in touch</h2>
+    <p>Found a bug, have a test idea, or spotted something that seems off? <a href="/contact.html">Contact us</a> — real feedback is how this site gets better.</p>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="logo" style="margin-bottom:8px;">MindGauge</div>
+      <p>Free instant mind &amp; reflex tests. For entertainment and informational purposes only — see our <a href="/disclaimer.html">disclaimer</a>.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms-of-service.html">Terms of Service</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:18px;">
+    <small style="font-family:var(--font-mono);">© <span id="year"></span> MindGauge.</small>
+  </div>
+</footer>
+
+<div class="cookie-banner">
+  <div class="wrap">
+    <p>We use cookies to run this site and, once you consent, to personalize ads. See our <a href="/privacy-policy.html" style="color:#fff;text-decoration:underline;">Privacy Policy</a>.</p>
+    <div class="actions">
+      <button class="btn ghost" data-reject>Reject</button>
+      <button class="btn" data-accept>Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
