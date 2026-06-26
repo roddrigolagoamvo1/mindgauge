@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hearing Frequency Test — Find Your Upper Pitch Limit | MindGauge</title>
+<meta name="description" content="Play a series of rising-pitch tones and find the highest frequency you can still hear. Free, instant, works in your browser — no app needed.">
+<link rel="canonical" href="https://mindgauge.fyi/tests/hearing-frequency-test.html">
+<meta property="og:title" content="Hearing Frequency Test — MindGauge">
+<meta property="og:description" content="Find the highest pitch you can still hear — free, instant.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mindgauge.fyi/tests/hearing-frequency-test.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Why does my result depend on my headphones?", "acceptedAnswer": { "@type": "Answer", "text": "Cheap speakers and earbuds often can't reproduce very high frequencies accurately, which can make your result look worse than your actual hearing. Good headphones give a more reliable result than laptop or phone speakers." } },
+    { "@type": "Question", "name": "Is hearing loss at high frequencies normal with age?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, to some degree — the ability to hear very high frequencies (above roughly 15-16kHz) commonly declines gradually with age, even in people with otherwise normal hearing. This test is informal and not a substitute for a real hearing exam." } },
+    { "@type": "Question", "name": "Is this a medical hearing test?", "acceptedAnswer": { "@type": "Answer", "text": "No. It's a rough, informal self-check using your device's speakers, not a calibrated audiometric exam. If you have real concerns about your hearing, see an audiologist." } }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="/" class="logo">
+      <svg class="dial" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="9" stroke="#FF5A36" stroke-width="2"/>
+        <line x1="12" y1="12" x2="16" y2="8" stroke="#1F2D50" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      MindGauge
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="nav-links">
+      <a href="/#speed">Speed &amp; Reflex</a>
+      <a href="/#mind">Personality</a>
+      <a href="/#senses">Senses</a>
+      <a href="/#knowledge">Knowledge</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top:36px;">
+  <p class="eyebrow">Senses &amp; Perception</p>
+  <h1>Hearing Frequency Test</h1>
+
+  <p style="max-width:680px;">Human hearing typically spans roughly 20Hz to 20,000Hz (20kHz), but the upper limit narrows for most people over time, usually starting in the high teens of kHz. This test plays a series of tones starting at 8,000Hz and climbing higher — for each one, tell us whether you can still hear it. The highest frequency you confirm becomes your result. <strong>Turn your volume to a comfortable, moderate level before starting</strong> — wired headphones give a far more accurate result than laptop or phone speakers.</p>
+
+  <!-- AD SLOT — antes da ferramenta -->
+  <div class="ad-slot in-article">AD PLACEHOLDER — IN-ARTICLE<br>(replace with AdSense unit after approval)</div>
+
+  <div class="tool-box">
+    <div class="tool-stage" id="stage-area">
+      <p class="tool-instructions" id="freq-label">Ready when you are.</p>
+      <button class="btn" id="play-btn">Play test tone (1000Hz)</button>
+      <div id="answer-buttons" style="display:none; gap:10px; margin-top:14px;">
+        <button class="btn" id="yes-btn">I can hear it</button>
+        <button class="btn ghost" id="no-btn">Can't hear it</button>
+      </div>
+      <div id="result-line" class="tool-instructions" style="margin-top:14px;"></div>
+    </div>
+  </div>
+
+  <div id="result-card" class="gauge-card" style="display:none; max-width:420px; margin:0 auto 32px;">
+    <svg class="gauge-svg" viewBox="0 0 300 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 30 150 A 120 120 0 0 1 270 150" fill="none" stroke="#C7CEDB" stroke-width="10" stroke-linecap="round"/>
+      <g class="gauge-needle" id="needle" style="transform:rotate(-90deg);">
+        <line x1="150" y1="150" x2="150" y2="48" stroke="#FF5A36" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="150" cy="150" r="7" fill="#1F2D50"/>
+      </g>
+      <text x="150" y="190" text-anchor="middle" class="gauge-value" id="gauge-readout">--</text>
+      <text x="150" y="208" text-anchor="middle" class="gauge-label">HIGHEST FREQUENCY HEARD (HZ)</text>
+    </svg>
+  </div>
+
+  <article class="article">
+    <h2>How it's measured</h2>
+    <p>Your browser generates each tone live using the Web Audio API — no audio files involved. After a calibration tone at 1000Hz (a comfortable, easy-to-hear reference), the test steps upward through 8,000 → 10,000 → 12,000 → 14,000 → 16,000 → 17,000 → 18,000 → 19,000 → 20,000Hz. The test ends at your first "can't hear it," and your result is the last frequency you confirmed.</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item">
+      <h3>Why does my result depend on my headphones?</h3>
+      <p>Cheap speakers and earbuds often can't reproduce very high frequencies accurately, which can make your result look worse than your real hearing. Good headphones give a far more reliable reading.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is hearing loss at high frequencies normal with age?</h3>
+      <p>Yes, to some degree — the ability to hear very high frequencies commonly narrows gradually with age, even with otherwise normal hearing. This test is informal, not a substitute for a real exam.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is this a medical hearing test?</h3>
+      <p>No — it's a rough self-check using your own device's speakers, not a calibrated audiometric exam. See an audiologist for real concerns.</p>
+    </div>
+
+    <h2>Related tests</h2>
+    <p>
+      <a href="/tests/color-blindness-test.html">Color Blindness Test</a> ·
+      <a href="/tests/eye-dominance-test.html">Eye Dominance Test</a> ·
+      <a href="/tests/memory-test.html">Memory Test</a>
+    </p>
+  </article>
+
+  <!-- AD SLOT — antes do rodapé -->
+  <div class="ad-slot in-article">AD PLACEHOLDER — IN-ARTICLE<br>(replace with AdSense unit after approval)</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="logo" style="margin-bottom:8px;">MindGauge</div>
+      <p>Free instant mind &amp; reflex tests. For entertainment and informational purposes only — see our <a href="/disclaimer.html">disclaimer</a>.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms-of-service.html">Terms of Service</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:18px;">
+    <small style="font-family:var(--font-mono);">© <span id="year"></span> MindGauge.</small>
+  </div>
+</footer>
+
+<div class="cookie-banner">
+  <div class="wrap">
+    <p>We use cookies to run this site and, once you consent, to personalize ads. See our <a href="/privacy-policy.html" style="color:#fff;text-decoration:underline;">Privacy Policy</a>.</p>
+    <div class="actions">
+      <button class="btn ghost" data-reject>Reject</button>
+      <button class="btn" data-accept>Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/main.js"></script>
+<script>
+(function () {
+  var FREQS = [8000, 10000, 12000, 14000, 16000, 17000, 18000, 19000, 20000];
+  var step = -1; // -1 = calibration tone
+  var lastHeard = 0;
+  var audioCtx = null;
+
+  var playBtn = document.getElementById('play-btn');
+  var answerButtons = document.getElementById('answer-buttons');
+  var freqLabel = document.getElementById('freq-label');
+  var resultLine = document.getElementById('result-line');
+  var resultCard = document.getElementById('result-card');
+
+  function playTone(freq) {
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    var osc = audioCtx.createOscillator();
+    var gain = audioCtx.createGain();
+    osc.type = 'sine';
+    osc.frequency.value = freq;
+    gain.gain.value = 0.18;
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.start();
+    setTimeout(function () { osc.stop(); }, 1500);
+  }
+
+  function showCalibration() {
+    freqLabel.textContent = 'Calibration tone — set a comfortable volume.';
+    playBtn.textContent = 'Play test tone (1000Hz)';
+    playBtn.style.display = 'inline-flex';
+    answerButtons.style.display = 'none';
+  }
+
+  function showStep() {
+    var freq = FREQS[step];
+    freqLabel.textContent = 'Tone ' + (step + 1) + ' / ' + FREQS.length + ' — ' + freq.toLocaleString() + ' Hz';
+    playBtn.textContent = 'Play this tone';
+    playBtn.style.display = 'inline-flex';
+    answerButtons.style.display = 'none';
+  }
+
+  function endTest() {
+    freqLabel.textContent = 'Test complete';
+    playBtn.style.display = 'none';
+    answerButtons.style.display = 'none';
+    resultLine.textContent = lastHeard > 0
+      ? 'You confirmed tones up to ' + lastHeard.toLocaleString() + ' Hz.'
+      : 'You didn\u2019t confirm any tone above the calibration step — try again with headphones at a comfortable volume.';
+
+    resultCard.style.display = 'block';
+    document.getElementById('gauge-readout').textContent = lastHeard || 0;
+    var pct = Math.max(0, Math.min(100, (lastHeard / 20000) * 100));
+    var deg = -90 + (pct / 100) * 180;
+    document.getElementById('needle').style.transform = 'rotate(' + deg + 'deg)';
+  }
+
+  playBtn.addEventListener('click', function () {
+    var freq = step === -1 ? 1000 : FREQS[step];
+    playTone(freq);
+    setTimeout(function () {
+      playBtn.style.display = 'none';
+      answerButtons.style.display = 'flex';
+    }, 600);
+  });
+
+  document.getElementById('yes-btn').addEventListener('click', function () {
+    if (step >= 0) lastHeard = FREQS[step];
+    step++;
+    if (step < FREQS.length) {
+      showStep();
+    } else {
+      endTest();
+    }
+  });
+
+  document.getElementById('no-btn').addEventListener('click', function () {
+    if (step === -1) {
+      // failed the calibration tone itself — restart prompt
+      freqLabel.textContent = 'Hmm, you should be able to hear 1000Hz. Check your volume and try again.';
+      answerButtons.style.display = 'none';
+      playBtn.style.display = 'inline-flex';
+      return;
+    }
+    endTest();
+  });
+
+  showCalibration();
+})();
+</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Aptitude Quiz — Find Your Work Style | MindGauge</title>
+<meta name="description" content="An 8-question quiz matching your natural strengths to one of four broad career directions: Builder, Strategist, Helper, or Creator. Free, instant, no sign-up.">
+<link rel="canonical" href="https://mindgauge.fyi/tests/career-aptitude-quiz.html">
+<meta property="og:title" content="Career Aptitude Quiz — MindGauge">
+<meta property="og:description" content="Which broad career direction fits how you actually like to work?">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mindgauge.fyi/tests/career-aptitude-quiz.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Does this tell me my exact ideal job?", "acceptedAnswer": { "@type": "Answer", "text": "No — it points to a broad direction (hands-on building, strategic analysis, helping people, or creative work), not a specific job title. Real career decisions should also weigh your skills, interests, and circumstances, ideally with input from a career counselor." } },
+    { "@type": "Question", "name": "Can I be a mix of categories?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — many people score close across two categories, and the result bars show your full profile, not just the top one." } }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="/" class="logo">
+      <svg class="dial" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="9" stroke="#FF5A36" stroke-width="2"/>
+        <line x1="12" y1="12" x2="16" y2="8" stroke="#1F2D50" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      MindGauge
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="nav-links">
+      <a href="/#speed">Speed &amp; Reflex</a>
+      <a href="/#mind">Personality</a>
+      <a href="/#senses">Senses</a>
+      <a href="/#knowledge">Knowledge</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top:36px;">
+  <p class="eyebrow">Mind &amp; Personality</p>
+  <h1>Career Aptitude Quiz</h1>
+
+  <p style="max-width:680px;">Eight questions about how you naturally like to work — not what you studied or where you currently work. Your result points to one of four broad directions: <strong>Builder</strong> (hands-on, technical, tangible results), <strong>Strategist</strong> (analysis, planning, systems), <strong>Helper</strong> (people, support, teaching), or <strong>Creator</strong> (original ideas, design, expression). This is a quick self-reflection prompt, not a career-placement test — treat the result as a starting point for thinking, not a verdict.</p>
+
+  <!-- AD SLOT — antes da ferramenta -->
+  <div class="ad-slot in-article">AD PLACEHOLDER — IN-ARTICLE<br>(replace with AdSense unit after approval)</div>
+
+  <div class="tool-box">
+    <div id="quiz-intro">
+      <p class="tool-instructions">8 questions · about 2 minutes</p>
+      <button class="btn" id="start-btn">Start quiz</button>
+    </div>
+    <div id="quiz-root" style="display:none;"></div>
+    <div id="quiz-result"></div>
+  </div>
+
+  <article class="article">
+    <h2>How it's measured</h2>
+    <p>Each answer adds a point toward one of four directions. After eight questions, the direction with the most points is your headline result, shown alongside all four scores so you can see your full profile.</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item">
+      <h3>Does this tell me my exact ideal job?</h3>
+      <p>No — it points to a broad direction, not a specific job title. Real career decisions should weigh your actual skills, interests and circumstances too, ideally with a career counselor's input.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I be a mix of categories?</h3>
+      <p>Yes — plenty of people score close across two. The bars show your full profile, not just the top label.</p>
+    </div>
+
+    <h2>Related tests</h2>
+    <p>
+      <a href="/tests/personality-type-quiz.html">Personality Type Quiz</a> ·
+      <a href="/tests/emotional-intelligence-test.html">Emotional Intelligence Test</a> ·
+      <a href="/tests/brain-dominance-test.html">Brain Dominance Test</a>
+    </p>
+  </article>
+
+  <!-- AD SLOT — antes do rodapé -->
+  <div class="ad-slot in-article">AD PLACEHOLDER — IN-ARTICLE<br>(replace with AdSense unit after approval)</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="logo" style="margin-bottom:8px;">MindGauge</div>
+      <p>Free instant mind &amp; reflex tests. For entertainment and informational purposes only — see our <a href="/disclaimer.html">disclaimer</a>.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms-of-service.html">Terms of Service</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:18px;">
+    <small style="font-family:var(--font-mono);">© <span id="year"></span> MindGauge.</small>
+  </div>
+</footer>
+
+<div class="cookie-banner">
+  <div class="wrap">
+    <p>We use cookies to run this site and, once you consent, to personalize ads. See our <a href="/privacy-policy.html" style="color:#fff;text-decoration:underline;">Privacy Policy</a>.</p>
+    <div class="actions">
+      <button class="btn ghost" data-reject>Reject</button>
+      <button class="btn" data-accept>Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/quiz-engine.js"></script>
+<script>
+(function () {
+  var results = {
+    builder: { name: 'The Builder', desc: 'You like work you can point to — something built, fixed, or assembled. You learn by doing and trust results you can see or test, more than theory alone.' },
+    strategist: { name: 'The Strategist', desc: 'You like analyzing systems, spotting patterns, and planning several steps ahead. Vague problems frustrate you; a clear structure or model satisfies you.' },
+    helper: { name: 'The Helper', desc: 'You\u2019re energized by people\u2019s progress — teaching, supporting, coaching. Work feels meaningful to you when you can see it actually helped someone.' },
+    creator: { name: 'The Creator', desc: 'You like making something original — writing, designing, composing. Blank-page freedom feels like opportunity to you, not a burden.' }
+  };
+
+  var questions = [
+    { text: 'Which task would you actually enjoy most?', options: [
+      { label: 'Assembling or fixing something physical', scores: { builder: 1 } },
+      { label: 'Building a spreadsheet model or a plan', scores: { strategist: 1 } },
+      { label: 'Coaching someone through a problem', scores: { helper: 1 } },
+      { label: 'Designing or writing something from scratch', scores: { creator: 1 } }
+    ]},
+    { text: 'In school, your favorite subjects leaned toward…', options: [
+      { label: 'Shop class, labs, anything hands-on', scores: { builder: 1 } },
+      { label: 'Math, logic, or systems-heavy subjects', scores: { strategist: 1 } },
+      { label: 'Group projects and helping classmates', scores: { helper: 1 } },
+      { label: 'Art, writing, or music', scores: { creator: 1 } }
+    ]},
+    { text: 'A satisfying end to a workday looks like…', options: [
+      { label: 'Something tangible got built or fixed', scores: { builder: 1 } },
+      { label: 'A messy problem now has a clear plan', scores: { strategist: 1 } },
+      { label: 'Someone you helped is in a better spot', scores: { helper: 1 } },
+      { label: 'You made something that didn\u2019t exist this morning', scores: { creator: 1 } }
+    ]},
+    { text: 'Which compliment fits best?', options: [
+      { label: '"You\u2019re great with your hands."', scores: { builder: 1 } },
+      { label: '"You think three steps ahead."', scores: { strategist: 1 } },
+      { label: '"You really care about people\u2019s growth."', scores: { helper: 1 } },
+      { label: '"Your ideas are so original."', scores: { creator: 1 } }
+    ]},
+    { text: 'A new tool or gadget arrives. You…', options: [
+      { label: 'Take it apart to see how it works', scores: { builder: 1 } },
+      { label: 'Read the manual and plan how to use it well', scores: { strategist: 1 } },
+      { label: 'Think about who else would benefit from it', scores: { helper: 1 } },
+      { label: 'Imagine new ways to use it nobody\u2019s tried', scores: { creator: 1 } }
+    ]},
+    { text: 'Pick the project you\u2019d volunteer for:', options: [
+      { label: 'Renovating or building something physical', scores: { builder: 1 } },
+      { label: 'Untangling a confusing process at work', scores: { strategist: 1 } },
+      { label: 'Mentoring someone new', scores: { helper: 1 } },
+      { label: 'Designing the look and feel of something', scores: { creator: 1 } }
+    ]},
+    { text: 'Under pressure, you tend to…', options: [
+      { label: 'Just start doing something useful with your hands', scores: { builder: 1 } },
+      { label: 'Step back and map out the smartest path', scores: { strategist: 1 } },
+      { label: 'Check in on how everyone else is holding up', scores: { helper: 1 } },
+      { label: 'Look for a creative workaround no one considered', scores: { creator: 1 } }
+    ]},
+    { text: 'Which feedback would sting the most to hear?', options: [
+      { label: '"This doesn\u2019t actually work."', scores: { builder: 1 } },
+      { label: '"You didn\u2019t think this through."', scores: { strategist: 1 } },
+      { label: '"That came across as uncaring."', scores: { helper: 1 } },
+      { label: '"This feels generic."', scores: { creator: 1 } }
+    ]}
+  ];
+
+  document.getElementById('start-btn').addEventListener('click', function () {
+    document.getElementById('quiz-intro').style.display = 'none';
+    var root = document.getElementById('quiz-root');
+    root.style.display = 'block';
+    MGQuiz({
+      questions: questions,
+      results: results,
+      rootId: 'quiz-root',
+      onComplete: function (scores) {
+        document.getElementById('quiz-root').style.display = 'none';
+        renderMGQuizResult('quiz-result', scores, results);
+      }
+    });
+  });
+})();
+</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

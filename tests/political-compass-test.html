@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Political Compass Test — Free 2-Axis Self-Assessment | MindGauge</title>
+<meta name="description" content="A 10-statement self-assessment mapping your views on two axes: economic (left to right) and social (libertarian to authoritarian). Free, instant, no sign-up.">
+<link rel="canonical" href="https://mindgauge.fyi/tests/political-compass-test.html">
+<meta property="og:title" content="Political Compass Test — MindGauge">
+<meta property="og:description" content="Map your views on two axes: economic and social.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mindgauge.fyi/tests/political-compass-test.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What do the two axes mean?", "acceptedAnswer": { "@type": "Answer", "text": "The horizontal axis reflects economic views, from favoring more government intervention on the left to favoring free markets on the right. The vertical axis reflects social views, from prioritizing individual freedom (libertarian) at the bottom to prioritizing order and authority (authoritarian) at the top." } },
+    { "@type": "Question", "name": "Is this the same as other well-known political compass tests?", "acceptedAnswer": { "@type": "Answer", "text": "No. The two-axis idea is a common, widely used framework, but the specific statements here are original and written for MindGauge. It is not affiliated with, and does not reproduce, any other named political compass test." } },
+    { "@type": "Question", "name": "Can 10 statements really capture someone's politics?", "acceptedAnswer": { "@type": "Answer", "text": "Not fully — real political views are more nuanced than two numbers. Treat this as a rough, simplified snapshot and a starting point for reflection, not a precise or scientific measurement." } }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="/" class="logo">
+      <svg class="dial" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="9" stroke="#FF5A36" stroke-width="2"/>
+        <line x1="12" y1="12" x2="16" y2="8" stroke="#1F2D50" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      MindGauge
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="nav-links">
+      <a href="/#speed">Speed &amp; Reflex</a>
+      <a href="/#mind">Personality</a>
+      <a href="/#senses">Senses</a>
+      <a href="/#knowledge">Knowledge</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top:36px;">
+  <p class="eyebrow">Mind &amp; Personality</p>
+  <h1>Political Compass Test</h1>
+
+  <p style="max-width:680px;">Ten statements, rated from "strongly disagree" to "strongly agree," map your views onto two independent axes: <strong>economic</strong> (more government intervention vs. free markets) and <strong>social</strong> (individual freedom vs. order and authority). These two axes are a widely used way to describe political positions without forcing everyone onto a single left-right line. The statements here are original and written to represent each side of each debate fairly — there's no "correct" place to land.</p>
+
+  <!-- AD SLOT — antes da ferramenta -->
+  <div class="ad-slot in-article">AD PLACEHOLDER — IN-ARTICLE<br>(replace with AdSense unit after approval)</div>
+
+  <div class="tool-box">
+    <div id="quiz-root"></div>
+    <div id="quiz-result" style="display:none;">
+      <p class="eyebrow">Your result</p>
+      <h3 class="result-headline" id="quadrant-label"></h3>
+      <svg viewBox="0 0 300 300" style="max-width:320px;margin:10px auto;display:block;" aria-hidden="true">
+        <rect x="0" y="0" width="150" height="150" fill="#FFE4DB"/>
+        <rect x="150" y="0" width="150" height="150" fill="#FFE4DB" opacity="0.5"/>
+        <rect x="0" y="150" width="150" height="150" fill="#E1F5EE" opacity="0.5"/>
+        <rect x="150" y="150" width="150" height="150" fill="#E1F5EE"/>
+        <line x1="150" y1="0" x2="150" y2="300" stroke="#C7CEDB" stroke-width="2"/>
+        <line x1="0" y1="150" x2="300" y2="150" stroke="#C7CEDB" stroke-width="2"/>
+        <text x="6" y="14" font-family="IBM Plex Mono" font-size="9" fill="#4A5468">AUTHORITARIAN</text>
+        <text x="6" y="292" font-family="IBM Plex Mono" font-size="9" fill="#4A5468">LIBERTARIAN</text>
+        <text x="150" y="14" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#4A5468">LEFT ←</text>
+        <text x="150" y="292" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#4A5468">→ RIGHT</text>
+        <circle id="dot" cx="150" cy="150" r="8" fill="#FF5A36" stroke="#1F2D50" stroke-width="2"/>
+      </svg>
+      <p style="text-align:center;font-family:var(--font-mono);font-size:.8rem;" id="score-readout"></p>
+      <p id="result-desc"></p>
+    </div>
+  </div>
+
+  <article class="article">
+    <h2>How it's measured</h2>
+    <p>Five statements relate to the economic axis and five to the social axis. Each rating (strongly disagree to strongly agree) contributes a positive or negative value depending on which direction that statement points. We total each axis separately and scale it to a -100 to +100 range, then plot the result as a single point on the grid above.</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item">
+      <h3>What do the two axes mean?</h3>
+      <p>The horizontal axis is economic — left favors more government intervention, right favors free markets. The vertical axis is social — the bottom favors individual freedom (libertarian), the top favors order and authority (authoritarian).</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is this the same as other well-known political compass tests?</h3>
+      <p>No. The two-axis framework is a common, widely used idea, but every statement here is original and written for MindGauge — it isn't affiliated with, and doesn't reproduce, any other named test.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can 10 statements really capture someone's politics?</h3>
+      <p>Not fully — real views are more nuanced than two numbers. Treat this as a rough, simplified snapshot for reflection, not a scientific measurement.</p>
+    </div>
+
+    <h2>Related tests</h2>
+    <p>
+      <a href="/tests/personality-type-quiz.html">Personality Type Quiz</a> ·
+      <a href="/tests/career-aptitude-quiz.html">Career Aptitude Quiz</a> ·
+      <a href="/#knowledge">Knowledge &amp; trivia tests</a>
+    </p>
+  </article>
+
+  <!-- AD SLOT — antes do rodapé -->
+  <div class="ad-slot in-article">AD PLACEHOLDER — IN-ARTICLE<br>(replace with AdSense unit after approval)</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="logo" style="margin-bottom:8px;">MindGauge</div>
+      <p>Free instant mind &amp; reflex tests. For entertainment and informational purposes only — see our <a href="/disclaimer.html">disclaimer</a>.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms-of-service.html">Terms of Service</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:18px;">
+    <small style="font-family:var(--font-mono);">© <span id="year"></span> MindGauge.</small>
+  </div>
+</footer>
+
+<div class="cookie-banner">
+  <div class="wrap">
+    <p>We use cookies to run this site and, once you consent, to personalize ads. See our <a href="/privacy-policy.html" style="color:#fff;text-decoration:underline;">Privacy Policy</a>.</p>
+    <div class="actions">
+      <button class="btn ghost" data-reject>Reject</button>
+      <button class="btn" data-accept>Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/main.js"></script>
+<script>
+(function () {
+  var LIKERT = [
+    { label: 'Strongly disagree', v: -2 },
+    { label: 'Disagree', v: -1 },
+    { label: 'Neutral', v: 0 },
+    { label: 'Agree', v: 1 },
+    { label: 'Strongly agree', v: 2 }
+  ];
+
+  // axis: 'econ' (- left, + right) or 'social' (- libertarian, + authoritarian)
+  // dir: multiplier applied to the Likert value
+  var QUESTIONS = [
+    { text: 'The government should take an active role in reducing economic inequality.', axis: 'econ', dir: -1 },
+    { text: 'Free markets generally produce better outcomes than centralized planning.', axis: 'econ', dir: 1 },
+    { text: 'Essential services like healthcare and education work best when primarily provided by government.', axis: 'econ', dir: -1 },
+    { text: 'Lower taxes and less regulation lead to more prosperity overall.', axis: 'econ', dir: 1 },
+    { text: 'Strong labor unions are necessary to balance power between workers and employers.', axis: 'econ', dir: -1 },
+    { text: 'Maintaining social order and tradition is more important than individual self-expression.', axis: 'social', dir: 1 },
+    { text: 'Adults should be free to make personal choices, even ones society disapproves of, as long as they don\u2019t harm others.', axis: 'social', dir: -1 },
+    { text: 'Governments should have broad authority to restrict freedoms in the name of public safety.', axis: 'social', dir: 1 },
+    { text: 'People should be able to live however they want without much interference from institutions or the state.', axis: 'social', dir: -1 },
+    { text: 'Respect for authority and established institutions is essential for a functioning society.', axis: 'social', dir: 1 }
+  ];
+
+  var root = document.getElementById('quiz-root');
+  var current = 0;
+  var econ = 0, social = 0;
+
+  function renderQuestion() {
+    var q = QUESTIONS[current];
+    var html = '<div class="quiz-progress">STATEMENT ' + (current + 1) + ' / ' + QUESTIONS.length + '</div>';
+    html += '<h3 class="quiz-question">' + q.text + '</h3>';
+    html += '<div class="quiz-options">';
+    LIKERT.forEach(function (opt, i) {
+      html += '<button class="quiz-option" data-i="' + i + '">' + opt.label + '</button>';
+    });
+    html += '</div>';
+    root.innerHTML = html;
+
+    var btns = root.querySelectorAll('.quiz-option');
+    for (var b = 0; b < btns.length; b++) {
+      btns[b].addEventListener('click', function (e) {
+        var idx = parseInt(e.currentTarget.getAttribute('data-i'), 10);
+        var contribution = LIKERT[idx].v * q.dir;
+        if (q.axis === 'econ') econ += contribution; else social += contribution;
+        current++;
+        if (current < QUESTIONS.length) {
+          renderQuestion();
+        } else {
+          finish();
+        }
+      });
+    }
+  }
+
+  function finish() {
+    root.style.display = 'none';
+    var econPct = Math.round((econ / 10) * 100);
+    var socialPct = Math.round((social / 10) * 100);
+
+    var cx = 150 + (econPct / 100) * 145;
+    var cy = 150 - (socialPct / 100) * 145;
+    document.getElementById('dot').setAttribute('cx', cx);
+    document.getElementById('dot').setAttribute('cy', cy);
+
+    var econLabel = econPct < 0 ? 'Left' : 'Right';
+    var socialLabel = socialPct < 0 ? 'Libertarian' : 'Authoritarian';
+    document.getElementById('quadrant-label').textContent = socialLabel + ' ' + econLabel;
+    document.getElementById('score-readout').textContent = 'ECONOMIC: ' + econPct + ' · SOCIAL: ' + socialPct;
+    document.getElementById('result-desc').textContent = 'Economic score ranges from -100 (favors government intervention) to +100 (favors free markets). Social score ranges from -100 (favors individual freedom) to +100 (favors order and authority). Remember: this is a simplified snapshot from 10 statements, not a precise measurement.';
+
+    document.getElementById('quiz-result').style.display = 'block';
+  }
+
+  renderQuestion();
+})();
+</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Blindness Test — Free Online Plate Test | MindGauge</title>
+<meta name="description" content="A short, Ishihara-inspired dot-plate test for red-green color perception. Free, instant — and not a substitute for a real eye exam.</p>">
+<link rel="canonical" href="https://mindgauge.fyi/tests/color-blindness-test.html">
+<meta property="og:title" content="Color Blindness Test — MindGauge">
+<meta property="og:description" content="A quick, free dot-plate test for red-green color perception.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mindgauge.fyi/tests/color-blindness-test.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Is this an official Ishihara test?", "acceptedAnswer": { "@type": "Answer", "text": "No. The plates here are generated freshly by your browser, inspired by the same dot-pattern idea used in real Ishihara plates, but they are not the calibrated, clinically validated plates used by eye care professionals." } },
+    { "@type": "Question", "name": "My screen might be the problem, not my eyes — is that possible?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Screen calibration, brightness, glare, and display quality all affect how these colors render, which can shift your result either direction. A real exam controls for all of that." } },
+    { "@type": "Question", "name": "What should I do if I miss several plates?", "acceptedAnswer": { "@type": "Answer", "text": "Missing some plates here is a reason to consider a real eye exam with an optometrist, not a diagnosis on its own. Plenty of factors besides color vision deficiency can affect a result like this." } }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="/" class="logo">
+      <svg class="dial" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="9" stroke="#FF5A36" stroke-width="2"/>
+        <line x1="12" y1="12" x2="16" y2="8" stroke="#1F2D50" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      MindGauge
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="nav-links">
+      <a href="/#speed">Speed &amp; Reflex</a>
+      <a href="/#mind">Personality</a>
+      <a href="/#senses">Senses</a>
+      <a href="/#knowledge">Knowledge</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top:36px;">
+  <p class="eyebrow">Senses &amp; Perception</p>
+  <h1>Color Blindness Test</h1>
+
+  <p style="max-width:680px;">Four dot-pattern plates, each hiding a number using colors that are commonly confused in red-green color vision deficiency — the most common type. Type the number you see in each plate. This is inspired by the well-known Ishihara plate concept but generated freshly in your browser; it is <strong>not</strong> a clinically calibrated test and can't diagnose anything on its own. Screen quality, brightness, and glare all affect the result too.</p>
+
+  <div class="callout" style="margin-bottom:24px;">
+    For an actual diagnosis, see an optometrist or ophthalmologist — they use calibrated printed plates under controlled lighting.
+  </div>
+
+  <!-- AD SLOT — antes da ferramenta -->
+  <div class="ad-slot in-article">AD PLACEHOLDER — IN-ARTICLE<br>(replace with AdSense unit after approval)</div>
+
+  <div class="tool-box">
+    <div class="tool-stage" id="stage-area">
+      <p class="tool-instructions" id="plate-label">PLATE 1 / 4</p>
+      <canvas id="plate-canvas" width="220" height="220" style="border-radius:50%;"></canvas>
+      <div style="margin-top:14px;">
+        <input type="tel" inputmode="numeric" id="answer-input" placeholder="Number you see" style="font-family:var(--font-mono);font-size:1rem;padding:10px 14px;border:1px solid var(--color-line);border-radius:6px;width:160px;text-align:center;">
+        <button class="btn" id="submit-btn" style="margin-left:8px;">Submit</button>
+      </div>
+      <div id="result-line" class="tool-instructions" style="margin-top:14px;"></div>
+    </div>
+  </div>
+
+  <div id="result-card" class="gauge-card" style="display:none; max-width:420px; margin:0 auto 32px;">
+    <svg class="gauge-svg" viewBox="0 0 300 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 30 150 A 120 120 0 0 1 270 150" fill="none" stroke="#C7CEDB" stroke-width="10" stroke-linecap="round"/>
+      <g class="gauge-needle" id="needle" style="transform:rotate(-90deg);">
+        <line x1="150" y1="150" x2="150" y2="48" stroke="#FF5A36" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="150" cy="150" r="7" fill="#1F2D50"/>
+      </g>
+      <text x="150" y="190" text-anchor="middle" class="gauge-value" id="gauge-readout">--</text>
+      <text x="150" y="208" text-anchor="middle" class="gauge-label">PLATES READ CORRECTLY (OUT OF 4)</text>
+    </svg>
+    <p id="result-text" style="text-align:center;margin-top:6px;"></p>
+  </div>
+
+  <article class="article">
+    <h2>How it's measured</h2>
+    <p>Each plate is drawn live by your browser: a hidden digit shape is filled with dots in one color family, and the surrounding area with dots in a different, commonly-confused color family. People with typical color vision usually separate the two easily; red-green color vision deficiency can make the digit blend into the background. Your score is simply how many of the four digits you read correctly.</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item">
+      <h3>Is this an official Ishihara test?</h3>
+      <p>No. These plates are generated freshly by your browser, inspired by the same dot-pattern idea, but they are not the calibrated, clinically validated plates eye care professionals use.</p>
+    </div>
+    <div class="faq-item">
+      <h3>My screen might be the problem, not my eyes — is that possible?</h3>
+      <p>Yes. Screen calibration, brightness, and glare all affect these colors and can shift your result either way. A real exam controls for that.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What should I do if I miss several plates?</h3>
+      <p>Consider a real eye exam with an optometrist — that's worth doing regardless, but missing plates here isn't a diagnosis on its own.</p>
+    </div>
+
+    <h2>Related tests</h2>
+    <p>
+      <a href="/tests/eye-dominance-test.html">Eye Dominance Test</a> ·
+      <a href="/tests/hearing-frequency-test.html">Hearing Frequency Test</a> ·
+      <a href="/tests/memory-test.html">Memory Test</a>
+    </p>
+  </article>
+
+  <!-- AD SLOT — antes do rodapé -->
+  <div class="ad-slot in-article">AD PLACEHOLDER — IN-ARTICLE<br>(replace with AdSense unit after approval)</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="logo" style="margin-bottom:8px;">MindGauge</div>
+      <p>Free instant mind &amp; reflex tests. For entertainment and informational purposes only — see our <a href="/disclaimer.html">disclaimer</a>.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms-of-service.html">Terms of Service</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:18px;">
+    <small style="font-family:var(--font-mono);">© <span id="year"></span> MindGauge.</small>
+  </div>
+</footer>
+
+<div class="cookie-banner">
+  <div class="wrap">
+    <p>We use cookies to run this site and, once you consent, to personalize ads. See our <a href="/privacy-policy.html" style="color:#fff;text-decoration:underline;">Privacy Policy</a>.</p>
+    <div class="actions">
+      <button class="btn ghost" data-reject>Reject</button>
+      <button class="btn" data-accept>Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/main.js"></script>
+<script>
+(function () {
+  var DIGITS = [6, 8, 3, 5];
+  var plateIndex = 0;
+  var correctCount = 0;
+
+  var canvas = document.getElementById('plate-canvas');
+  var ctx = canvas.getContext('2d');
+  var input = document.getElementById('answer-input');
+  var label = document.getElementById('plate-label');
+  var resultLine = document.getElementById('result-line');
+
+  function drawPlate(digit) {
+    var w = canvas.width, h = canvas.height;
+    var cx = w / 2, cy = h / 2, r = w / 2 - 4;
+
+    var mask = document.createElement('canvas');
+    mask.width = w; mask.height = h;
+    var mctx = mask.getContext('2d');
+    mctx.fillStyle = '#fff';
+    mctx.fillRect(0, 0, w, h);
+    mctx.fillStyle = '#000';
+    mctx.font = 'bold ' + Math.floor(w * 0.62) + 'px Arial, sans-serif';
+    mctx.textAlign = 'center';
+    mctx.textBaseline = 'middle';
+    mctx.fillText(String(digit), cx, cy + h * 0.02);
+    var maskData = mctx.getImageData(0, 0, w, h).data;
+
+    function isInside(x, y) {
+      if (x < 0 || y < 0 || x >= w || y >= h) return false;
+      var idx = (Math.floor(y) * w + Math.floor(x)) * 4;
+      return maskData[idx] < 128;
+    }
+
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = '#fdf6ec';
+    ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.fill();
+
+    var bgColors = ['#9aa66b', '#8a9b5e', '#a3ad75', '#7f8f54', '#92a169'];
+    var fgColors = ['#c66b3d', '#b85c30', '#d17a46', '#a8542a', '#c4703a'];
+    var step = 7;
+
+    for (var y = 0; y < h; y += step) {
+      for (var x = 0; x < w; x += step) {
+        var jx = x + (Math.random() - 0.5) * step;
+        var jy = y + (Math.random() - 0.5) * step;
+        var dx = jx - cx, dy = jy - cy;
+        if (dx * dx + dy * dy > r * r) continue;
+        var inside = isInside(jx, jy);
+        var palette = inside ? fgColors : bgColors;
+        var color = palette[Math.floor(Math.random() * palette.length)];
+        var rad = 2 + Math.random() * 2.4;
+        ctx.beginPath();
+        ctx.arc(jx, jy, rad, 0, Math.PI * 2);
+        ctx.fillStyle = color;
+        ctx.fill();
+      }
+    }
+  }
+
+  function showPlate() {
+    label.textContent = 'PLATE ' + (plateIndex + 1) + ' / ' + DIGITS.length;
+    input.value = '';
+    input.disabled = false;
+    resultLine.textContent = '';
+    drawPlate(DIGITS[plateIndex]);
+    input.focus();
+  }
+
+  function finish() {
+    canvas.style.display = 'none';
+    input.style.display = 'none';
+    document.getElementById('submit-btn').style.display = 'none';
+    label.textContent = 'Test complete';
+    resultLine.textContent = 'You read ' + correctCount + ' out of ' + DIGITS.length + ' plates correctly.';
+
+    var card = document.getElementById('result-card');
+    card.style.display = 'block';
+    document.getElementById('gauge-readout').textContent = correctCount + '/' + DIGITS.length;
+    var pct = (correctCount / DIGITS.length) * 100;
+    var deg = -90 + (pct / 100) * 180;
+    document.getElementById('needle').style.transform = 'rotate(' + deg + 'deg)';
+    document.getElementById('result-text').textContent =
+      correctCount === DIGITS.length ? 'You read every plate as typically intended.' :
+      correctCount >= DIGITS.length / 2 ? 'A mixed result — consider a real exam if you\u2019re curious.' :
+      'Several plates were missed — worth following up with an optometrist if this interests you.';
+  }
+
+  function submitAnswer() {
+    var val = parseInt(input.value, 10);
+    if (val === DIGITS[plateIndex]) {
+      correctCount++;
+      resultLine.textContent = 'Correct!';
+    } else {
+      resultLine.textContent = 'Recorded — the intended number was ' + DIGITS[plateIndex] + '.';
+    }
+    plateIndex++;
+    setTimeout(function () {
+      if (plateIndex < DIGITS.length) {
+        showPlate();
+      } else {
+        finish();
+      }
+    }, 700);
+  }
+
+  document.getElementById('submit-btn').addEventListener('click', submitAnswer);
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') submitAnswer();
+  });
+
+  showPlate();
+})();
+</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>General Knowledge Quiz — Free 10-Question Trivia | MindGauge</title>
+<meta name="description" content="A mixed-difficulty, 10-question general knowledge quiz covering science, geography, history, and language. Free, instant, no sign-up.">
+<link rel="canonical" href="https://mindgauge.fyi/tests/general-knowledge-quiz.html">
+<meta property="og:title" content="General Knowledge Quiz — MindGauge">
+<meta property="og:description" content="A quick 10-question trivia round, mixed difficulty.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mindgauge.fyi/tests/general-knowledge-quiz.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How hard are the questions?", "acceptedAnswer": { "@type": "Answer", "text": "Mixed difficulty — a few are quite easy, a few require some recall. Topics span basic science, geography, history, and language." } },
+    { "@type": "Question", "name": "Will I get the same 10 questions if I retake it?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, this set is fixed for now. We may rotate in new question sets over time, so it's worth checking back." } }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="/" class="logo">
+      <svg class="dial" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="9" stroke="#FF5A36" stroke-width="2"/>
+        <line x1="12" y1="12" x2="16" y2="8" stroke="#1F2D50" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      MindGauge
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="nav-links">
+      <a href="/#speed">Speed &amp; Reflex</a>
+      <a href="/#mind">Personality</a>
+      <a href="/#senses">Senses</a>
+      <a href="/#knowledge">Knowledge</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top:36px;">
+  <p class="eyebrow">Knowledge &amp; Trivia</p>
+  <h1>General Knowledge Quiz</h1>
+
+  <p style="max-width:680px;">Ten questions spanning science, geography, history, and language, roughly ordered from easier to trickier. Pick your answer for instant feedback, and see your final score — out of 10 — at the end, along with where that lands on the gauge.</p>
+
+  <!-- AD SLOT — antes da ferramenta -->
+  <div class="ad-slot in-article">AD PLACEHOLDER — IN-ARTICLE<br>(replace with AdSense unit after approval)</div>
+
+  <div class="tool-box">
+    <div id="quiz-root"></div>
+  </div>
+
+  <div id="result-card" class="gauge-card" style="display:none; max-width:420px; margin:0 auto 32px;">
+    <svg class="gauge-svg" viewBox="0 0 300 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 30 150 A 120 120 0 0 1 270 150" fill="none" stroke="#C7CEDB" stroke-width="10" stroke-linecap="round"/>
+      <g class="gauge-needle" id="needle" style="transform:rotate(-90deg);">
+        <line x1="150" y1="150" x2="150" y2="48" stroke="#FF5A36" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="150" cy="150" r="7" fill="#1F2D50"/>
+      </g>
+      <text x="150" y="190" text-anchor="middle" class="gauge-value" id="gauge-readout">--</text>
+      <text x="150" y="208" text-anchor="middle" class="gauge-label">CORRECT ANSWERS (OUT OF 10)</text>
+    </svg>
+    <p id="result-text" style="text-align:center; margin-top:6px;"></p>
+  </div>
+
+  <article class="article">
+    <h2>How it's measured</h2>
+    <p>Each correct answer is worth one point. After all ten questions, your total score is shown as a gauge reading out of 10, scaled to a 0-100 needle position.</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item">
+      <h3>How hard are the questions?</h3>
+      <p>Mixed difficulty — a few are easy, a few need some recall. Topics span basic science, geography, history, and language.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Will I get the same 10 questions if I retake it?</h3>
+      <p>Yes, this set is fixed for now — we may rotate in new sets over time.</p>
+    </div>
+
+    <h2>Related tests</h2>
+    <p>
+      <a href="/tests/english-dialect-quiz.html">English Dialect Quiz</a> ·
+      <a href="/tests/memory-test.html">Memory Test</a> ·
+      <a href="/#mind">Personality tests</a>
+    </p>
+  </article>
+
+  <!-- AD SLOT — antes do rodapé -->
+  <div class="ad-slot in-article">AD PLACEHOLDER — IN-ARTICLE<br>(replace with AdSense unit after approval)</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="logo" style="margin-bottom:8px;">MindGauge</div>
+      <p>Free instant mind &amp; reflex tests. For entertainment and informational purposes only — see our <a href="/disclaimer.html">disclaimer</a>.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms-of-service.html">Terms of Service</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:18px;">
+    <small style="font-family:var(--font-mono);">© <span id="year"></span> MindGauge.</small>
+  </div>
+</footer>
+
+<div class="cookie-banner">
+  <div class="wrap">
+    <p>We use cookies to run this site and, once you consent, to personalize ads. See our <a href="/privacy-policy.html" style="color:#fff;text-decoration:underline;">Privacy Policy</a>.</p>
+    <div class="actions">
+      <button class="btn ghost" data-reject>Reject</button>
+      <button class="btn" data-accept>Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/trivia-engine.js"></script>
+<script>
+(function () {
+  var questions = [
+    { text: 'What is the largest planet in our solar system?', options: ['Earth', 'Saturn', 'Jupiter', 'Neptune'], correct: 2 },
+    { text: 'Which element has the chemical symbol "O"?', options: ['Gold', 'Oxygen', 'Osmium', 'Iron'], correct: 1 },
+    { text: 'What is the capital of Australia?', options: ['Sydney', 'Melbourne', 'Canberra', 'Perth'], correct: 2 },
+    { text: 'Who wrote the play "Romeo and Juliet"?', options: ['Charles Dickens', 'William Shakespeare', 'Mark Twain', 'Jane Austen'], correct: 1 },
+    { text: 'In what year did World War II end?', options: ['1943', '1945', '1947', '1950'], correct: 1 },
+    { text: 'What is the smallest prime number?', options: ['0', '1', '2', '3'], correct: 2 },
+    { text: 'Which ocean is the largest by surface area?', options: ['Atlantic', 'Indian', 'Arctic', 'Pacific'], correct: 3 },
+    { text: 'How many continents are there in the standard model?', options: ['5', '6', '7', '8'], correct: 2 },
+    { text: 'What is the most widely spoken language in Brazil?', options: ['Spanish', 'Portuguese', 'French', 'Italian'], correct: 1 },
+    { text: 'Which gas do plants primarily absorb for photosynthesis?', options: ['Oxygen', 'Nitrogen', 'Carbon dioxide', 'Hydrogen'], correct: 2 }
+  ];
+
+  MGTrivia({
+    questions: questions,
+    rootId: 'quiz-root',
+    onFinish: function (score, total) {
+      document.getElementById('quiz-root').style.display = 'none';
+      var card = document.getElementById('result-card');
+      card.style.display = 'block';
+      document.getElementById('gauge-readout').textContent = score + '/' + total;
+      var pct = (score / total) * 100;
+      var deg = -90 + (pct / 100) * 180;
+      document.getElementById('needle').style.transform = 'rotate(' + deg + 'deg)';
+      var msg = score >= 9 ? 'Excellent — you barely missed a thing.' :
+                score >= 7 ? 'Solid score — better than most.' :
+                score >= 5 ? 'Right in the middle of the pack.' :
+                'A rough round — try again, the questions stay the same for now.';
+      document.getElementById('result-text').textContent = msg;
+    }
+  });
+})();
+</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

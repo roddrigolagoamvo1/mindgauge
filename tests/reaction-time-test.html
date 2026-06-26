@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reaction Time Test — Free Online Test | MindGauge</title>
+<meta name="description" content="Test your visual reaction time in 5 quick rounds. See your average response time in milliseconds and how it compares to typical human reflexes.">
+<link rel="canonical" href="https://mindgauge.fyi/tests/reaction-time-test.html">
+<meta property="og:title" content="Reaction Time Test — MindGauge">
+<meta property="og:description" content="Test your visual reaction time in 5 quick rounds — free, instant, no sign-up.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mindgauge.fyi/tests/reaction-time-test.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a good reaction time?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most adults react to a simple visual cue in roughly 200 to 300 milliseconds. Under 200ms is considered very fast, while anything above 350ms is on the slower end. Reaction time naturally varies with tiredness, age, and how the test is taken." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do my results vary between attempts?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Reaction time is affected by attention, screen refresh rate, input device, and even how alert you are at that moment. Small variations of 20-50ms between attempts are completely normal." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this test diagnose any condition?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. This is a simple self-assessment for entertainment and general curiosity, not a medical or clinical measurement. It should not be used to diagnose attention, neurological, or vision conditions." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="/" class="logo">
+      <svg class="dial" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="9" stroke="#FF5A36" stroke-width="2"/>
+        <line x1="12" y1="12" x2="16" y2="8" stroke="#1F2D50" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      MindGauge
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="nav-links">
+      <a href="/#speed">Speed &amp; Reflex</a>
+      <a href="/#mind">Personality</a>
+      <a href="/#senses">Senses</a>
+      <a href="/#knowledge">Knowledge</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top:36px;">
+  <p class="eyebrow">Speed &amp; Reflex</p>
+  <h1>Reaction Time Test</h1>
+
+  <p style="max-width:680px;">This test measures how quickly you react to a simple visual signal — the same kind of measurement used in basic cognitive and driving-reflex research, simplified into a quick browser game. You'll see a box that starts dark blue; the instant it turns teal, click it as fast as you can. You'll run five rounds, and we'll throw out any round where you clicked too early, since that measures impatience rather than reaction speed. Your final score is the average of your five valid rounds, shown in milliseconds (ms) — a thousandth of a second. For context, a blink takes about 300-400ms, so most people land somewhere close to the speed of their own blink.</p>
+
+  <!-- AD SLOT — antes da ferramenta -->
+  <div class="ad-slot in-article">AD PLACEHOLDER — IN-ARTICLE<br>(replace with AdSense unit after approval)</div>
+
+  <div class="tool-box">
+    <div class="tool-stage" id="stage-area">
+      <p class="tool-instructions" id="round-label">ROUND 0 / 5</p>
+      <div class="target-zone ready" id="target" role="button" tabindex="0">Click "Start" below</div>
+      <div id="result-line" class="tool-instructions"></div>
+      <button class="btn" id="start-btn">Start test</button>
+    </div>
+  </div>
+
+  <div id="result-card" class="gauge-card" style="display:none; max-width:420px; margin:0 auto 32px;">
+    <svg class="gauge-svg" viewBox="0 0 300 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 30 150 A 120 120 0 0 1 270 150" fill="none" stroke="#C7CEDB" stroke-width="10" stroke-linecap="round"/>
+      <g class="gauge-needle" id="needle" style="transform:rotate(-90deg);">
+        <line x1="150" y1="150" x2="150" y2="48" stroke="#FF5A36" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="150" cy="150" r="7" fill="#1F2D50"/>
+      </g>
+      <text x="150" y="190" text-anchor="middle" class="gauge-value" id="gauge-readout">--</text>
+      <text x="150" y="208" text-anchor="middle" class="gauge-label">AVERAGE REACTION TIME (MS)</text>
+    </svg>
+  </div>
+
+  <article class="article">
+    <h2>How it's measured</h2>
+    <p>Each round, the page waits a random interval between 1.5 and 4 seconds before switching the box from blue to teal — the random delay stops you from just predicting the timing. The moment the color changes, your browser records a timestamp; the moment you click, it records another. The difference between the two is your reaction time for that round, in milliseconds. We average your five valid rounds, since a single click can be skewed by a stumble or a moment of distraction.</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item">
+      <h3>What is a good reaction time?</h3>
+      <p>Most adults land between 200 and 300ms on a test like this. Under 200ms is fast; over 350ms is on the slower side. Age, screen refresh rate, and how alert you are all shift the number.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why do my results vary between attempts?</h3>
+      <p>Attention, input device, and screen refresh rate all introduce some noise. A swing of 20-50ms between runs is completely normal — try the test a few times across the day to see your own range.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does this test diagnose any condition?</h3>
+      <p>No. It's a quick self-check for curiosity, not a clinical or diagnostic tool. It shouldn't be used to evaluate attention, neurological, or vision conditions.</p>
+    </div>
+
+    <h2>Related tests</h2>
+    <p>
+      <a href="/tests/typing-speed-test.html">Typing Speed Test</a> ·
+      <a href="/tests/memory-test.html">Memory Test</a> ·
+      <a href="/#mind">Personality tests</a>
+    </p>
+  </article>
+
+  <!-- AD SLOT — antes do rodapé -->
+  <div class="ad-slot in-article">AD PLACEHOLDER — IN-ARTICLE<br>(replace with AdSense unit after approval)</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="logo" style="margin-bottom:8px;">MindGauge</div>
+      <p>Free instant mind &amp; reflex tests. For entertainment and informational purposes only — see our <a href="/disclaimer.html">disclaimer</a>.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms-of-service.html">Terms of Service</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:18px;">
+    <small style="font-family:var(--font-mono);">© <span id="year"></span> MindGauge.</small>
+  </div>
+</footer>
+
+<div class="cookie-banner">
+  <div class="wrap">
+    <p>We use cookies to run this site and, once you consent, to personalize ads. See our <a href="/privacy-policy.html" style="color:#fff;text-decoration:underline;">Privacy Policy</a>.</p>
+    <div class="actions">
+      <button class="btn ghost" data-reject>Reject</button>
+      <button class="btn" data-accept>Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/main.js"></script>
+<script>
+(function () {
+  var startBtn = document.getElementById('start-btn');
+  var target = document.getElementById('target');
+  var roundLabel = document.getElementById('round-label');
+  var resultLine = document.getElementById('result-line');
+  var resultCard = document.getElementById('result-card');
+
+  var TOTAL_ROUNDS = 5;
+  var round = 0;
+  var times = [];
+  var goAt = 0;
+  var timeoutId = null;
+  var state = 'idle'; // idle | waiting | go
+
+  function startRound() {
+    state = 'waiting';
+    target.className = 'target-zone ready';
+    target.textContent = 'Wait for teal…';
+    resultLine.textContent = '';
+    var delay = 1500 + Math.random() * 2500;
+    timeoutId = setTimeout(function () {
+      state = 'go';
+      goAt = performance.now();
+      target.className = 'target-zone go';
+      target.textContent = 'Click now!';
+    }, delay);
+  }
+
+  function endTest() {
+    var avg = times.reduce(function (a, b) { return a + b; }, 0) / times.length;
+    roundLabel.textContent = 'DONE';
+    target.className = 'target-zone ready';
+    target.textContent = 'Test complete';
+    resultLine.textContent = 'Average: ' + Math.round(avg) + ' ms over ' + times.length + ' rounds';
+    startBtn.textContent = 'Try again';
+    startBtn.disabled = false;
+
+    resultCard.style.display = 'block';
+    // Mapeia 150ms (rápido) -> score 100, 450ms (lento) -> score 0
+    var score = Math.max(0, Math.min(100, 100 - ((avg - 150) / 3)));
+    document.getElementById('gauge-readout').textContent = Math.round(avg);
+    var deg = -90 + (score / 100) * 180;
+    document.getElementById('needle').style.transform = 'rotate(' + deg + 'deg)';
+  }
+
+  target.addEventListener('click', function () {
+    if (state === 'waiting') {
+      clearTimeout(timeoutId);
+      target.className = 'target-zone early';
+      target.textContent = 'Too soon — retry this round';
+      state = 'idle';
+      setTimeout(startRound, 900);
+      return;
+    }
+    if (state === 'go') {
+      var rt = performance.now() - goAt;
+      times.push(rt);
+      round++;
+      roundLabel.textContent = 'ROUND ' + round + ' / ' + TOTAL_ROUNDS;
+      resultLine.textContent = 'Round ' + round + ': ' + Math.round(rt) + ' ms';
+      state = 'idle';
+      if (round >= TOTAL_ROUNDS) {
+        setTimeout(endTest, 500);
+      } else {
+        setTimeout(startRound, 700);
+      }
+    }
+  });
+
+  startBtn.addEventListener('click', function () {
+    round = 0; times = [];
+    startBtn.disabled = true;
+    resultCard.style.display = 'none';
+    roundLabel.textContent = 'ROUND 1 / ' + TOTAL_ROUNDS;
+    startRound();
+  });
+})();
+</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

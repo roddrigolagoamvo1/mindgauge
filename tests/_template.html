@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  _template.html — MASTER TEMPLATE. NÃO publique este arquivo.
+  Duplique-o pra cada novo teste e renomeie (ex.: memory-test.html).
+
+  Checklist antes de publicar uma página feita a partir deste template:
+  [ ] Título e meta description únicos e específicos pro teste
+  [ ] Introdução de 150-300 palavras de texto REAL (não enrolação) —
+      isso é o que evita o rótulo de "low-value content"/"scaled content
+      abuse" do Google. Não copie esse parágrafo entre páginas.
+  [ ] A ferramenta interativa de fato funcionando (JS próprio do teste)
+  [ ] Seção "How it's measured" explicando a metodologia
+  [ ] 4-6 perguntas de FAQ reais (não genéricas) + o schema FAQPage abaixo
+  [ ] 3 links pra "Related tests" (ligações internas = ajuda SEO)
+  [ ] Atualizar o <link rel="canonical"> e o og:url
+  ============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- TODO: título único, ~55-60 caracteres -->
+<title>[Test Name] — Free Online Test | MindGauge</title>
+<!-- TODO: descrição única, ~150-160 caracteres -->
+<meta name="description" content="[One or two sentences describing exactly what this test measures and how long it takes.]">
+<link rel="canonical" href="https://mindgauge.fyi/tests/[test-slug].html">
+<meta property="og:title" content="[Test Name] — MindGauge">
+<meta property="og:description" content="[Same as meta description]">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mindgauge.fyi/tests/[test-slug].html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<!-- TODO: preencher com perguntas reais do FAQ desta página -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "[Pergunta 1]",
+      "acceptedAnswer": { "@type": "Answer", "text": "[Resposta 1]" }
+    },
+    {
+      "@type": "Question",
+      "name": "[Pergunta 2]",
+      "acceptedAnswer": { "@type": "Answer", "text": "[Resposta 2]" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- HEADER: copie exatamente do index.html, sem alterar -->
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="/" class="logo">
+      <svg class="dial" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="9" stroke="#FF5A36" stroke-width="2"/>
+        <line x1="12" y1="12" x2="16" y2="8" stroke="#1F2D50" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      MindGauge
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="nav-links">
+      <a href="/#speed">Speed &amp; Reflex</a>
+      <a href="/#mind">Personality</a>
+      <a href="/#senses">Senses</a>
+      <a href="/#knowledge">Knowledge</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top:36px;">
+  <p class="eyebrow"><!-- TODO: categoria, ex.: "Speed & Reflex" -->[Category]</p>
+  <h1><!-- TODO: nome do teste -->[Test Name]</h1>
+
+  <!-- TODO: 150-300 palavras ÚNICAS sobre o que é, por que importa,
+       como interpretar o resultado. Isso é a parte que mais protege
+       a página de ser marcada como "thin content". -->
+  <p>[Intro paragraph — write real, specific copy here.]</p>
+
+  <!-- AD SLOT — antes da ferramenta (mantenha em todo teste novo) -->
+  <div class="ad-slot in-article">AD PLACEHOLDER — IN-ARTICLE<br>(replace with AdSense unit after approval)</div>
+
+  <!-- A FERRAMENTA EM SI -->
+  <div class="tool-box">
+    <div class="tool-stage" id="tool-stage">
+      <!-- TODO: construir a interação real em JS (ver reaction-time-test.html
+           e typing-speed-test.html como referência de padrão) -->
+      <p class="tool-instructions">[Instructions before starting]</p>
+      <button class="btn" id="start-btn">Start</button>
+    </div>
+  </div>
+
+  <article class="article">
+    <h2>How it's measured</h2>
+    <!-- TODO: 100-200 palavras explicando a metodologia (constrói confiança/E-E-A-T) -->
+    <p>[Methodology explanation.]</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item">
+      <h3>[Pergunta 1]</h3>
+      <p>[Resposta 1]</p>
+    </div>
+    <div class="faq-item">
+      <h3>[Pergunta 2]</h3>
+      <p>[Resposta 2]</p>
+    </div>
+
+    <h2>Related tests</h2>
+    <p>
+      <!-- TODO: linkar 3 testes relacionados de verdade -->
+      <a href="/tests/[related-1].html">[Related test 1]</a> ·
+      <a href="/tests/[related-2].html">[Related test 2]</a> ·
+      <a href="/tests/[related-3].html">[Related test 3]</a>
+    </p>
+  </article>
+
+  <!-- AD SLOT — antes do rodapé (mantenha em todo teste novo) -->
+  <div class="ad-slot in-article">AD PLACEHOLDER — IN-ARTICLE<br>(replace with AdSense unit after approval)</div>
+</main>
+
+<!-- FOOTER: copie exatamente do index.html, sem alterar -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="logo" style="margin-bottom:8px;">MindGauge</div>
+      <p>Free instant mind &amp; reflex tests. For entertainment and informational purposes only — see our <a href="/disclaimer.html">disclaimer</a>.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms-of-service.html">Terms of Service</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:18px;">
+    <small style="font-family:var(--font-mono);">© <span id="year"></span> MindGauge.</small>
+  </div>
+</footer>
+
+<div class="cookie-banner">
+  <div class="wrap">
+    <p>We use cookies to run this site and, once you consent, to personalize ads. See our <a href="/privacy-policy.html" style="color:#fff;text-decoration:underline;">Privacy Policy</a>.</p>
+    <div class="actions">
+      <button class="btn ghost" data-reject>Reject</button>
+      <button class="btn" data-accept>Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/main.js"></script>
+<!-- TODO: script específico deste teste, ex. /assets/js/[test-slug].js -->
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

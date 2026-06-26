@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eye Dominance Test — Find Your Dominant Eye | MindGauge</title>
+<meta name="description" content="A guided, 30-second physical test using your hands to find which eye your brain relies on more. Free, instant, no equipment needed.">
+<link rel="canonical" href="https://mindgauge.fyi/tests/eye-dominance-test.html">
+<meta property="og:title" content="Eye Dominance Test — MindGauge">
+<meta property="og:description" content="A 30-second guided test to find your dominant eye.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mindgauge.fyi/tests/eye-dominance-test.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is eye dominance?", "acceptedAnswer": { "@type": "Answer", "text": "Most people have one eye their brain relies on slightly more for aiming and depth judgments, similar to handedness. It usually has nothing to do with which eye sees more sharply." } },
+    { "@type": "Question", "name": "Why does this need my hands instead of just clicking?", "acceptedAnswer": { "@type": "Answer", "text": "Eye dominance is a physical, real-world phenomenon involving how your two eyes' views align with a distant object. A screen alone can't measure that — this test guides you through the classic hand-triangle method and asks you to report what you observed." } },
+    { "@type": "Question", "name": "What if the result seems inconsistent?", "acceptedAnswer": { "@type": "Answer", "text": "Try it two or three times, picking a clear, distant object each time (a doorknob across the room works well). A genuinely mixed or unclear result is possible and not a cause for concern." } }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="/" class="logo">
+      <svg class="dial" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="9" stroke="#FF5A36" stroke-width="2"/>
+        <line x1="12" y1="12" x2="16" y2="8" stroke="#1F2D50" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      MindGauge
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="nav-links">
+      <a href="/#speed">Speed &amp; Reflex</a>
+      <a href="/#mind">Personality</a>
+      <a href="/#senses">Senses</a>
+      <a href="/#knowledge">Knowledge</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top:36px;">
+  <p class="eyebrow">Senses &amp; Perception</p>
+  <h1>Eye Dominance Test</h1>
+
+  <p style="max-width:680px;">Most people have one eye their brain quietly favors for aiming and depth — similar in spirit to being right- or left-handed. Unlike the other tests on this site, this one needs your actual hands and eyes for about 30 seconds; the page guides you through the classic "hand triangle" method and asks what you observed. No camera, no permissions — just you, your hands, and a distant object.</p>
+
+  <!-- AD SLOT — antes da ferramenta -->
+  <div class="ad-slot in-article">AD PLACEHOLDER — IN-ARTICLE<br>(replace with AdSense unit after approval)</div>
+
+  <div class="tool-box">
+    <div id="step-1">
+      <svg viewBox="0 0 220 160" style="max-width:240px;margin:0 auto 14px;display:block;" aria-hidden="true">
+        <circle cx="110" cy="80" r="6" fill="#FF5A36"/>
+        <path d="M40 140 L100 30 L160 140" fill="none" stroke="#1F2D50" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M40 140 L120 30 L160 140" fill="none" stroke="#1F2D50" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+      </svg>
+      <p class="tool-instructions" style="text-align:left; max-width:480px; margin:0 auto;">
+        <strong>Step 1.</strong> Pick a small, clear object across the room (a doorknob, a light switch). Hold both hands out in front of you and overlap your thumbs and index fingers to form a small triangular "window," like in the illustration above.
+      </p>
+      <p class="tool-instructions" style="text-align:left; max-width:480px; margin:8px auto 0;">
+        <strong>Step 2.</strong> With <em>both eyes open</em>, center the object inside that triangle, arms held steady.
+      </p>
+      <button class="btn" id="step1-next" style="margin-top:16px;">I'm ready — next step</button>
+    </div>
+
+    <div id="step-2" style="display:none;">
+      <p class="tool-instructions" style="max-width:480px; margin:0 auto 10px;">
+        <strong>Step 3.</strong> Keeping your hands and head still, close your <strong>left eye only</strong>. What happens to the object inside the triangle?
+      </p>
+      <div class="quiz-options" style="max-width:420px; margin:0 auto;">
+        <button class="quiz-option" data-result="right">It stayed roughly centered in the triangle</button>
+        <button class="quiz-option" data-result="left">It jumped out of the triangle / disappeared</button>
+        <button class="quiz-option" data-result="unsure">Hard to tell — looked about the same</button>
+      </div>
+    </div>
+
+    <div id="step-3-result" style="display:none;">
+      <p class="eyebrow">Your result</p>
+      <h3 class="result-headline" id="result-headline"></h3>
+      <p id="result-desc"></p>
+      <button class="btn ghost" id="retry-btn">Try again</button>
+    </div>
+  </div>
+
+  <article class="article">
+    <h2>How it's measured</h2>
+    <p>This uses the classic "Miles test" (or hand-triangle test) for eye dominance: when both eyes are open, your brain blends the two slightly different views into one. Closing your non-dominant eye barely shifts what you see, since your brain was already leaning on the other eye — so the object stays framed. Closing your dominant eye removes the view it was relying on, so the object appears to jump.</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item">
+      <h3>What is eye dominance?</h3>
+      <p>Most people have one eye their brain relies on slightly more for aiming and depth — similar to handedness, and usually unrelated to which eye sees more sharply.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why does this need my hands instead of just clicking?</h3>
+      <p>Eye dominance is a physical, real-world effect involving how your two eyes line up with a distant object — a screen alone can't measure that, so this test guides you through the real method and asks what you observed.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What if the result seems inconsistent?</h3>
+      <p>Try it two or three times with a clear, distant object. A genuinely mixed result is possible and not a cause for concern.</p>
+    </div>
+
+    <h2>Related tests</h2>
+    <p>
+      <a href="/tests/color-blindness-test.html">Color Blindness Test</a> ·
+      <a href="/tests/hearing-frequency-test.html">Hearing Frequency Test</a> ·
+      <a href="/tests/reaction-time-test.html">Reaction Time Test</a>
+    </p>
+  </article>
+
+  <!-- AD SLOT — antes do rodapé -->
+  <div class="ad-slot in-article">AD PLACEHOLDER — IN-ARTICLE<br>(replace with AdSense unit after approval)</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="logo" style="margin-bottom:8px;">MindGauge</div>
+      <p>Free instant mind &amp; reflex tests. For entertainment and informational purposes only — see our <a href="/disclaimer.html">disclaimer</a>.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms-of-service.html">Terms of Service</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:18px;">
+    <small style="font-family:var(--font-mono);">© <span id="year"></span> MindGauge.</small>
+  </div>
+</footer>
+
+<div class="cookie-banner">
+  <div class="wrap">
+    <p>We use cookies to run this site and, once you consent, to personalize ads. See our <a href="/privacy-policy.html" style="color:#fff;text-decoration:underline;">Privacy Policy</a>.</p>
+    <div class="actions">
+      <button class="btn ghost" data-reject>Reject</button>
+      <button class="btn" data-accept>Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/main.js"></script>
+<script>
+(function () {
+  var step1 = document.getElementById('step-1');
+  var step2 = document.getElementById('step-2');
+  var step3 = document.getElementById('step-3-result');
+
+  document.getElementById('step1-next').addEventListener('click', function () {
+    step1.style.display = 'none';
+    step2.style.display = 'block';
+  });
+
+  var resultsMeta = {
+    right: { headline: 'Right-eye dominant', desc: 'When you closed your left eye, the object stayed framed — meaning your brain was already relying mainly on your right eye\u2019s view.' },
+    left: { headline: 'Left-eye dominant', desc: 'When you closed your left eye, the object jumped out of view — meaning your brain was relying mainly on that eye, and removing it shifted everything.' },
+    unsure: { headline: 'Unclear result', desc: 'It happens — try again with a smaller, more distant object and make sure your hands stay still between closing each eye. A genuinely mixed result is also possible.' }
+  };
+
+  var btns = step2.querySelectorAll('.quiz-option');
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click', function (e) {
+      var key = e.currentTarget.getAttribute('data-result');
+      step2.style.display = 'none';
+      step3.style.display = 'block';
+      document.getElementById('result-headline').textContent = resultsMeta[key].headline;
+      document.getElementById('result-desc').textContent = resultsMeta[key].desc;
+    });
+  }
+
+  document.getElementById('retry-btn').addEventListener('click', function () {
+    step3.style.display = 'none';
+    step1.style.display = 'block';
+  });
+})();
+</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

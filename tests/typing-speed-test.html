@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Typing Speed Test — Free WPM &amp; Accuracy Test | MindGauge</title>
+<meta name="description" content="Type a short passage and instantly see your words per minute (WPM) and typing accuracy. Free, no sign-up, results in under a minute.">
+<link rel="canonical" href="https://mindgauge.fyi/tests/typing-speed-test.html">
+<meta property="og:title" content="Typing Speed Test — MindGauge">
+<meta property="og:description" content="Measure your typing speed (WPM) and accuracy in under a minute — free, no sign-up.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mindgauge.fyi/tests/typing-speed-test.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a good typing speed?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Average typists reach around 35-45 words per minute (WPM). Most professional roles that involve heavy typing look for 60-80 WPM, and competitive typists can exceed 120 WPM." }
+    },
+    {
+      "@type": "Question",
+      "name": "How is WPM calculated?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We divide the number of words in the passage by the time you took, in minutes. A 'word' is standardized as 5 characters, which is the common convention used by most typing tests." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does accuracy affect my WPM score?",
+      "acceptedAnswer": { "@type": "Answer", "text": "On this test, WPM and accuracy are shown as two separate numbers, so you can see your raw speed alongside how clean your typing was, rather than one blended score." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="/" class="logo">
+      <svg class="dial" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="9" stroke="#FF5A36" stroke-width="2"/>
+        <line x1="12" y1="12" x2="16" y2="8" stroke="#1F2D50" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      MindGauge
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="nav-links">
+      <a href="/#speed">Speed &amp; Reflex</a>
+      <a href="/#mind">Personality</a>
+      <a href="/#senses">Senses</a>
+      <a href="/#knowledge">Knowledge</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top:36px;">
+  <p class="eyebrow">Speed &amp; Reflex</p>
+  <h1>Typing Speed Test</h1>
+
+  <p style="max-width:680px;">Type the passage below as quickly and accurately as you can. The timer starts the moment you type the first character and stops automatically once you reach the end. Your result has two numbers: words per minute (WPM), which measures raw speed, and accuracy, which measures how many characters matched the original text. Together they give a fuller picture than speed alone — someone typing 90 WPM with 70% accuracy is, in practice, slower than someone typing 60 WPM at 99%, once you account for the time spent fixing mistakes.</p>
+
+  <!-- AD SLOT — antes da ferramenta -->
+  <div class="ad-slot in-article">AD PLACEHOLDER — IN-ARTICLE<br>(replace with AdSense unit after approval)</div>
+
+  <div class="tool-box">
+    <div class="tool-stage" id="stage-area" style="align-items:stretch;">
+      <div class="prompt-text" id="prompt-text"></div>
+      <div class="typing-area">
+        <textarea id="typing-input" placeholder="Click here and start typing the passage above…" autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>
+      </div>
+      <div class="meta-row" style="justify-content:center; gap:24px; margin-top:14px;">
+        <span id="live-time">TIME: 0.0s</span>
+        <span id="live-wpm">WPM: --</span>
+        <span id="live-acc">ACCURACY: --</span>
+      </div>
+      <button class="btn" id="restart-btn" style="margin-top:14px;">Restart</button>
+    </div>
+  </div>
+
+  <div id="result-card" class="gauge-card" style="display:none; max-width:420px; margin:0 auto 32px;">
+    <svg class="gauge-svg" viewBox="0 0 300 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 30 150 A 120 120 0 0 1 270 150" fill="none" stroke="#C7CEDB" stroke-width="10" stroke-linecap="round"/>
+      <g class="gauge-needle" id="needle" style="transform:rotate(-90deg);">
+        <line x1="150" y1="150" x2="150" y2="48" stroke="#FF5A36" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="150" cy="150" r="7" fill="#1F2D50"/>
+      </g>
+      <text x="150" y="190" text-anchor="middle" class="gauge-value" id="gauge-readout">--</text>
+      <text x="150" y="208" text-anchor="middle" class="gauge-label">WORDS PER MINUTE</text>
+    </svg>
+  </div>
+
+  <article class="article">
+    <h2>How it's measured</h2>
+    <p>The instant you type the first character, we start a timer using your browser's high-resolution clock. As you type, each character is compared against the same position in the passage and marked correct or incorrect in real time. When you reach the end of the passage (or click Finish), we stop the timer and calculate WPM using the standard convention of 5 characters per "word," and accuracy as the percentage of characters that matched.</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item">
+      <h3>What is a good typing speed?</h3>
+      <p>Average typists land around 35-45 WPM. Office roles that involve a lot of typing often look for 60-80 WPM, and competitive typists can exceed 120 WPM.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How is WPM calculated?</h3>
+      <p>We divide the number of words in the passage by your time in minutes, using the common 5-characters-per-word convention.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does accuracy affect my WPM score?</h3>
+      <p>They're shown separately here, so you can see your raw speed and your precision as two distinct numbers rather than one blended score.</p>
+    </div>
+
+    <h2>Related tests</h2>
+    <p>
+      <a href="/tests/reaction-time-test.html">Reaction Time Test</a> ·
+      <a href="/tests/memory-test.html">Memory Test</a> ·
+      <a href="/#mind">Personality tests</a>
+    </p>
+  </article>
+
+  <!-- AD SLOT — antes do rodapé -->
+  <div class="ad-slot in-article">AD PLACEHOLDER — IN-ARTICLE<br>(replace with AdSense unit after approval)</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="logo" style="margin-bottom:8px;">MindGauge</div>
+      <p>Free instant mind &amp; reflex tests. For entertainment and informational purposes only — see our <a href="/disclaimer.html">disclaimer</a>.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms-of-service.html">Terms of Service</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:18px;">
+    <small style="font-family:var(--font-mono);">© <span id="year"></span> MindGauge.</small>
+  </div>
+</footer>
+
+<div class="cookie-banner">
+  <div class="wrap">
+    <p>We use cookies to run this site and, once you consent, to personalize ads. See our <a href="/privacy-policy.html" style="color:#fff;text-decoration:underline;">Privacy Policy</a>.</p>
+    <div class="actions">
+      <button class="btn ghost" data-reject>Reject</button>
+      <button class="btn" data-accept>Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/main.js"></script>
+<script>
+(function () {
+  var PASSAGE = "The quick brown fox jumps over the lazy dog while the morning sun rises slowly above the quiet hills, painting the sky in soft shades of orange and pink before the small town below begins to wake up.";
+
+  var promptEl = document.getElementById('prompt-text');
+  var input = document.getElementById('typing-input');
+  var liveTime = document.getElementById('live-time');
+  var liveWpm = document.getElementById('live-wpm');
+  var liveAcc = document.getElementById('live-acc');
+  var restartBtn = document.getElementById('restart-btn');
+  var resultCard = document.getElementById('result-card');
+
+  var startTime = null;
+  var timerId = null;
+  var finished = false;
+
+  function renderPrompt(typed) {
+    var html = '';
+    for (var i = 0; i < PASSAGE.length; i++) {
+      var cls = 'pending';
+      if (i < typed.length) {
+        cls = typed[i] === PASSAGE[i] ? 'ok' : 'bad';
+      }
+      var ch = PASSAGE[i] === ' ' ? '&nbsp;' : PASSAGE[i];
+      html += '<span class="' + cls + '">' + ch + '</span>';
+    }
+    promptEl.innerHTML = html;
+  }
+
+  function computeAccuracy(typed) {
+    var correct = 0;
+    var len = Math.min(typed.length, PASSAGE.length);
+    for (var i = 0; i < len; i++) {
+      if (typed[i] === PASSAGE[i]) correct++;
+    }
+    return typed.length ? Math.round((correct / typed.length) * 100) : 100;
+  }
+
+  function tick() {
+    if (!startTime || finished) return;
+    var elapsed = (performance.now() - startTime) / 1000;
+    liveTime.textContent = 'TIME: ' + elapsed.toFixed(1) + 's';
+  }
+
+  function finish(typed) {
+    finished = true;
+    clearInterval(timerId);
+    var elapsedMin = (performance.now() - startTime) / 60000;
+    var words = PASSAGE.length / 5;
+    var wpm = elapsedMin > 0 ? Math.round(words / elapsedMin) : 0;
+    var acc = computeAccuracy(typed);
+
+    liveWpm.textContent = 'WPM: ' + wpm;
+    liveAcc.textContent = 'ACCURACY: ' + acc + '%';
+    input.disabled = true;
+
+    resultCard.style.display = 'block';
+    var score = Math.max(0, Math.min(100, wpm));
+    document.getElementById('gauge-readout').textContent = wpm;
+    var deg = -90 + (score / 100) * 180;
+    document.getElementById('needle').style.transform = 'rotate(' + deg + 'deg)';
+  }
+
+  function reset() {
+    finished = false;
+    startTime = null;
+    clearInterval(timerId);
+    input.value = '';
+    input.disabled = false;
+    liveTime.textContent = 'TIME: 0.0s';
+    liveWpm.textContent = 'WPM: --';
+    liveAcc.textContent = 'ACCURACY: --';
+    resultCard.style.display = 'none';
+    renderPrompt('');
+    input.focus();
+  }
+
+  input.addEventListener('input', function () {
+    if (finished) return;
+    if (!startTime) {
+      startTime = performance.now();
+      timerId = setInterval(tick, 100);
+    }
+    var typed = input.value;
+    renderPrompt(typed);
+    if (typed.length >= PASSAGE.length) {
+      finish(typed);
+    }
+  });
+
+  restartBtn.addEventListener('click', reset);
+
+  renderPrompt('');
+})();
+</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
