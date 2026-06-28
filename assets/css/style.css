@@ -107,7 +107,7 @@ p { margin: 0 0 1.1em; color: var(--color-ink-soft); }
 }
 .nav {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 14px 0;
+  padding-top: 14px; padding-bottom: 14px;
 }
 .logo {
   display: flex; align-items: center; gap: 8px;
@@ -142,7 +142,7 @@ p { margin: 0 0 1.1em; color: var(--color-ink-soft); }
 
 /* -------------------------------- Hero ----------------------------------- */
 .hero {
-  padding: 64px 0 48px;
+  padding-top: 64px; padding-bottom: 48px;
   display: grid;
   grid-template-columns: 1.2fr .8fr;
   gap: var(--gap);
@@ -150,7 +150,7 @@ p { margin: 0 0 1.1em; color: var(--color-ink-soft); }
 }
 @media (max-width: 820px) { .hero { grid-template-columns: 1fr; } }
 @media (max-width: 480px) {
-  .hero { padding: 28px 0 32px; }
+  .hero { padding-top: 28px; padding-bottom: 32px; }
   .hero .specs { gap: 8px 16px; }
   .gauge-card { padding: 20px; }
 }
@@ -201,7 +201,7 @@ p { margin: 0 0 1.1em; color: var(--color-ink-soft); }
 .gauge-label { font-family: var(--font-mono); font-size: .72rem; fill: var(--color-ink-soft); letter-spacing: .06em; }
 
 /* ----------------------------- Section / Cards --------------------------- */
-.section { padding: 40px 0; }
+.section { padding-top: 40px; padding-bottom: 40px; }
 .section-head {
   display: flex; align-items: baseline; justify-content: space-between;
   margin-bottom: 22px; flex-wrap: wrap; gap: 10px;
