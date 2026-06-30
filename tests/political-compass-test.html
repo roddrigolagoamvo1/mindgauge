@@ -76,6 +76,7 @@
       </svg>
       <p style="text-align:center;font-family:var(--font-mono);font-size:.8rem;" id="score-readout"></p>
       <p id="result-desc"></p>
+      <div id="share-block" style="margin-top:18px;"></div>
     </div>
   </div>
 
@@ -212,6 +213,7 @@
     document.getElementById('result-desc').textContent = 'Economic score ranges from -100 (favors government intervention) to +100 (favors free markets). Social score ranges from -100 (favors individual freedom) to +100 (favors order and authority). Remember: this is a simplified snapshot from 10 statements, not a precise measurement.';
 
     document.getElementById('quiz-result').style.display = 'block';
+    showMGShare('I\'m ' + socialLabel + ' ' + econLabel + ' on MindGauge\'s Political Compass — where do you stand?');
   }
 
   renderQuestion();

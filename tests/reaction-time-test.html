@@ -78,7 +78,18 @@
     </div>
   </div>
 
-  <div id="result-card" class="gauge-card" style="display:none; max-width:420px; margin:0 auto 32px;">
+  <div id="result-card" class="gauge-card" style="display:none; max-width:420px; margin:0 auto 18px;">
+    <svg class="gauge-svg" viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 30 150 A 120 120 0 0 1 270 150" fill="none" stroke="#C7CEDB" stroke-width="10" stroke-linecap="round"/>
+      <g class="gauge-needle" id="needle" style="transform:rotate(-90deg);">
+        <line x1="150" y1="150" x2="150" y2="48" stroke="#FF5A36" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="150" cy="150" r="7" fill="#1F2D50"/>
+      </g>
+      <text x="150" y="190" text-anchor="middle" class="gauge-value" id="gauge-readout">--</text>
+      <text x="150" y="208" text-anchor="middle" class="gauge-label">AVERAGE REACTION TIME (MS)</text>
+    </svg>
+  </div>
+  <div id="share-block"></div>
     <svg class="gauge-svg" viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path d="M 30 150 A 120 120 0 0 1 270 150" fill="none" stroke="#C7CEDB" stroke-width="10" stroke-linecap="round"/>
       <g class="gauge-needle" id="needle" style="transform:rotate(-90deg);">
@@ -194,6 +205,7 @@
     document.getElementById('gauge-readout').textContent = Math.round(avg);
     var deg = -90 + (score / 100) * 180;
     document.getElementById('needle').style.transform = 'rotate(' + deg + 'deg)';
+    showMGShare('My average reaction time is ' + Math.round(avg) + 'ms on the MindGauge Reaction Time Test — can you beat it?');
   }
 
   target.addEventListener('click', function () {

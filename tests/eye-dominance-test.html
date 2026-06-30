@@ -87,6 +87,7 @@
       <p class="eyebrow">Your result</p>
       <h3 class="result-headline" id="result-headline"></h3>
       <p id="result-desc"></p>
+      <div id="share-block" style="margin:14px 0;"></div>
       <button class="btn ghost" id="retry-btn">Try again</button>
     </div>
   </div>
@@ -176,6 +177,7 @@
       step3.style.display = 'block';
       document.getElementById('result-headline').textContent = resultsMeta[key].headline;
       document.getElementById('result-desc').textContent = resultsMeta[key].desc;
+      showMGShare('I am ' + resultsMeta[key].headline + ' — MindGauge Eye Dominance Test');
     });
   }
 

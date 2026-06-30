@@ -81,6 +81,7 @@
       <text x="150" y="208" text-anchor="middle" class="gauge-label">LONGEST SEQUENCE REPRODUCED</text>
     </svg>
   </div>
+  <div id="share-block"></div>
 
   <article class="article">
     <h2>How it's measured</h2>
@@ -200,6 +201,7 @@
     document.getElementById('gauge-readout').textContent = score;
     var deg = -90 + (gaugeScore / 100) * 180;
     document.getElementById('needle').style.transform = 'rotate(' + deg + 'deg)';
+    showMGShare('I recalled a sequence of ' + score + ' steps on the MindGauge Memory Test');
   }
 
   function nextRound() {

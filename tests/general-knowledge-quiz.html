@@ -71,6 +71,7 @@
     </svg>
     <p id="result-text" style="text-align:center; margin-top:6px;"></p>
   </div>
+  <div id="share-block"></div>
 
   <article class="article">
     <h2>How it's measured</h2>
@@ -160,6 +161,7 @@
                 score >= 5 ? 'Right in the middle of the pack.' :
                 'A rough round — try again, the questions stay the same for now.';
       document.getElementById('result-text').textContent = msg;
+      showMGShare('I got ' + score + '/' + total + ' on the MindGauge General Knowledge Quiz — can you beat me?');
     }
   });
 })();

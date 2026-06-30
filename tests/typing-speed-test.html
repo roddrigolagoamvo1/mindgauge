@@ -84,7 +84,7 @@
     </div>
   </div>
 
-  <div id="result-card" class="gauge-card" style="display:none; max-width:420px; margin:0 auto 32px;">
+  <div id="result-card" class="gauge-card" style="display:none; max-width:420px; margin:0 auto 18px;">
     <svg class="gauge-svg" viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path d="M 30 150 A 120 120 0 0 1 270 150" fill="none" stroke="#C7CEDB" stroke-width="10" stroke-linecap="round"/>
       <g class="gauge-needle" id="needle" style="transform:rotate(-90deg);">
@@ -95,6 +95,7 @@
       <text x="150" y="208" text-anchor="middle" class="gauge-label">WORDS PER MINUTE</text>
     </svg>
   </div>
+  <div id="share-block"></div>
 
   <article class="article">
     <h2>How it's measured</h2>
@@ -217,10 +218,10 @@
     document.getElementById('gauge-readout').textContent = wpm;
     var deg = -90 + (score / 100) * 180;
     document.getElementById('needle').style.transform = 'rotate(' + deg + 'deg)';
+    showMGShare('I type ' + wpm + ' WPM with ' + acc + '% accuracy on MindGauge — what\'s your score?');
   }
 
   function reset() {
-    finished = false;
     startTime = null;
     clearInterval(timerId);
     input.value = '';

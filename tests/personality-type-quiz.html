@@ -59,6 +59,7 @@
   <div class="tool-box">
     <div id="quiz-root"></div>
     <div id="quiz-result"></div>
+    <div id="share-block"></div>
   </div>
 
   <article class="article">
@@ -191,6 +192,8 @@ MGQuiz({
   onComplete: function (scores) {
     document.getElementById('quiz-root').style.display = 'none';
     renderMGQuizResult('quiz-result', scores, results);
+        var topKey = Object.keys(scores).sort(function(a,b){return scores[b]-scores[a];})[0];
+        showMGShare('I\'m ' + results[topKey].name + ' on MindGauge\'s Personality Type Quiz');
   }
 });
 </script>

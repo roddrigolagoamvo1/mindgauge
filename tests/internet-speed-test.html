@@ -78,6 +78,7 @@
       <text x="150" y="208" text-anchor="middle" class="gauge-label">DOWNLOAD SPEED (MBPS, APPROX.)</text>
     </svg>
   </div>
+  <div id="share-block"></div>
 
   <article class="article">
     <h2>How it's measured</h2>
@@ -201,6 +202,7 @@
       var pct = Math.max(0, Math.min(100, (mbps / 150) * 100));
       var deg = -90 + (pct / 100) * 180;
       document.getElementById('needle').style.transform = 'rotate(' + deg + 'deg)';
+      showMGShare('My download speed is ' + mbps.toFixed(1) + ' Mbps — tested with MindGauge');
     }).catch(function () {
       statusLabel.textContent = 'Something went wrong — check your connection and try again.';
       startBtn.disabled = false;

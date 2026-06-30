@@ -84,6 +84,7 @@
     </svg>
     <p id="result-text" style="text-align:center;margin-top:6px;"></p>
   </div>
+  <div id="share-block"></div>
 
   <article class="article">
     <h2>How it's measured</h2>
@@ -227,6 +228,7 @@
     var pct = (correctCount / DIGITS.length) * 100;
     var deg = -90 + (pct / 100) * 180;
     document.getElementById('needle').style.transform = 'rotate(' + deg + 'deg)';
+    showMGShare('I read ' + correctCount + '/4 color blindness plates on MindGauge');
     document.getElementById('result-text').textContent =
       correctCount === DIGITS.length ? 'You read every plate as typically intended.' :
       correctCount >= DIGITS.length / 2 ? 'A mixed result — consider a real exam if you\u2019re curious.' :

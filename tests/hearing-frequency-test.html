@@ -79,6 +79,7 @@
       <text x="150" y="208" text-anchor="middle" class="gauge-label">HIGHEST FREQUENCY HEARD (HZ)</text>
     </svg>
   </div>
+  <div id="share-block"></div>
 
   <article class="article">
     <h2>How it's measured</h2>
@@ -194,6 +195,7 @@
     var pct = Math.max(0, Math.min(100, (lastHeard / 20000) * 100));
     var deg = -90 + (pct / 100) * 180;
     document.getElementById('needle').style.transform = 'rotate(' + deg + 'deg)';
+    if (lastHeard > 0) { showMGShare('I can hear up to ' + lastHeard.toLocaleString() + 'Hz on the MindGauge Hearing Frequency Test'); }
   }
 
   playBtn.addEventListener('click', function () {

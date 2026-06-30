@@ -59,7 +59,47 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 })();
 
-// ---- Helper do gauge (usado nas páginas de resultado) ----------------------
+// ---- Botões de compartilhamento de resultado --------------------------------
+// Chamada: showMGShare("I got X/10 on the General Knowledge Quiz")
+// Renderiza X/WhatsApp/Copy dentro de <div id="share-block"> na página.
+function showMGShare(text) {
+  var el = document.getElementById('share-block');
+  if (!el) return;
+  var url = (window.location.href.split('?')[0]).split('#')[0];
+  var shareText = text + ' — try it free at mindgauge.fyi';
+  var tweetUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareText);
+  var waUrl = 'https://wa.me/?text=' + encodeURIComponent(text + '\n' + url);
+
+  el.innerHTML =
+    '<div class="share-wrap">' +
+    '<span class="share-eyebrow">Share your result</span>' +
+    '<div class="share-btns">' +
+    '<a class="share-btn x-btn" href="' + tweetUrl + '" target="_blank" rel="noopener">Post on 𝕏</a>' +
+    '<a class="share-btn wa-btn" href="' + waUrl + '" target="_blank" rel="noopener">WhatsApp</a>' +
+    '<button class="share-btn copy-btn" id="mg-copy-btn">Copy</button>' +
+    '</div></div>';
+
+  document.getElementById('mg-copy-btn').addEventListener('click', function () {
+    var btn = this;
+    var copyText = text + '\n' + url;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(copyText).then(function () {
+        btn.textContent = 'Copied ✓';
+        setTimeout(function () { btn.textContent = 'Copy'; }, 2000);
+      });
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = copyText;
+      ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      btn.textContent = 'Copied ✓';
+      setTimeout(function () { btn.textContent = 'Copy'; }, 2000);
+    }
+  });
+}
+
 // Recebe um valor de 0 a 100 e rotaciona a agulha de -90deg (mínimo) a
 // +90deg (máximo) sobre um arco semicircular. Usado em reaction-time-test,
 // typing-speed-test e em qualquer teste futuro que precise de um "readout".

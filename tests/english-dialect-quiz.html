@@ -70,6 +70,7 @@
       <text x="150" y="208" text-anchor="middle" class="gauge-label">CORRECT ANSWERS (OUT OF 10)</text>
     </svg>
   </div>
+  <div id="share-block"></div>
 
   <article class="article">
     <h2>How it's measured</h2>
@@ -154,6 +155,7 @@
       var pct = (score / total) * 100;
       var deg = -90 + (pct / 100) * 180;
       document.getElementById('needle').style.transform = 'rotate(' + deg + 'deg)';
+      showMGShare('I got ' + score + '/' + total + ' on the MindGauge English Dialect Quiz');
     }
   });
 })();

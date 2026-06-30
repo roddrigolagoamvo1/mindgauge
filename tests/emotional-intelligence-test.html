@@ -75,6 +75,7 @@
       <text x="150" y="208" text-anchor="middle" class="gauge-label">EQ SELF-CHECK SCORE (0-100)</text>
     </svg>
   </div>
+  <div id="share-block"></div>
 
   <article class="article">
     <h2>How it's measured</h2>
@@ -200,6 +201,7 @@
     document.getElementById('gauge-readout').textContent = pct;
     var deg = -90 + (pct / 100) * 180;
     document.getElementById('needle').style.transform = 'rotate(' + deg + 'deg)';
+    showMGShare('My EQ self-check score is ' + pct + '/100 on MindGauge');
   }
 
   renderQuestion();
